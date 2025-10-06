@@ -1,8 +1,11 @@
 import * as tf from "@tensorflow/tfjs";
+import "@tensorflow/tfjs-backend-webgl";
+import model from "../../public/model/model.json";
+import labels from "../../public/model/labels.json";
 let model = null;
 let modelType = null; // "layers" | "graph"
 let labels = null;
-let INPUT_SIZE = 64; // fallback
+let INPUT_SIZE = 84; // fallback
 
 async function loadModelAndLabels() {
   if (!model) {
