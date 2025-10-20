@@ -5,6 +5,7 @@ import RotateButton from "./components/RotateButton";
 import { recognizeSign } from "./utils/ai_model";
 import "./index.css";
 
+
 export default function App() {
   const [cameraStarted, setCameraStarted] = useState(false);
   const [recognizedText, setRecognizedText] = useState("");
